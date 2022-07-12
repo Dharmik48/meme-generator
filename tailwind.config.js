@@ -8,6 +8,11 @@ module.exports = {
 			letterSpacing: {
 				tightest: '-.1em',
 			},
+			colors: {
+				algae: '#00998D',
+				grass: '#9EDE7B',
+				palenight: '#164e63',
+			},
 		},
 	},
 	plugins: [],
