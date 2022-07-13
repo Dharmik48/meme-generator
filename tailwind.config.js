@@ -4,6 +4,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Karla', 'sans-serif'],
+				mono: ['Oswald', 'sans-serif'],
 			},
 			letterSpacing: {
 				tightest: '-.1em',
