@@ -1,8 +1,15 @@
-export default function Browse({ memes }) {
+export default function Browse({ memes, setCurrMeme, setBrowse }) {
 	const renderMemes = memes.map((meme, i) => {
 		return (
 			i < 25 && (
-				<li key={meme.id} className='md:p-4'>
+				<li
+					key={meme.id}
+					className='cursor-pointer p-4'
+					onClick={() => {
+						setCurrMeme(meme);
+						setBrowse(false);
+					}}
+				>
 					<img src={meme.url} alt={meme.name} loading='lazy' />
 				</li>
 			)

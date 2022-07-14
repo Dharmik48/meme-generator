@@ -4,21 +4,13 @@ import MemeImg from './MemeImg';
 import DownloadBtn from './DownloadBtn';
 import RandomImg from './RandomImg';
 
-export default function Meme() {
-	const [memes, setMemes] = useState([]);
-	const [currMeme, setCurrMeme] = useState({});
+export default function Meme({ memes, setMemes, currMeme, setCurrMeme }) {
 	const [topText, setTopText] = useState('Top Text');
 	const [bottomText, setBottomText] = useState('Bottom Text');
 
 	useEffect(() => {
-		fetch('https://api.imgflip.com/get_memes')
-			.then(data => data.json())
-			.then(({ data }) => {
-				setMemes(data.memes);
-				setCurrMeme(
-					data.memes[Math.floor(Math.random() * data.memes.length + 1)]
-				);
-			});
+		Object.keys(currMeme).length === 0 &&
+			setCurrMeme(memes[Math.floor(Math.random() * memes.length + 1)]);
 	}, []);
 
 	return (

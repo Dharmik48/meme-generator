@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 export default function App() {
 	const [browse, setBrowse] = useState(true);
 	const [memes, setMemes] = useState([]);
+	const [currMeme, setCurrMeme] = useState({});
 
 	useEffect(() => {
 		fetch('https://api.imgflip.com/get_memes')
@@ -16,15 +17,22 @@ export default function App() {
 				// setCurrMeme(
 				// 	data.memes[Math.floor(Math.random() * data.memes.length + 1)]
 				// );
-				console.log('MEMES SET');
-				console.log(memes);
 			});
 	}, []);
 
 	return (
 		<div className='flex flex-col justify-between dark:bg-palenight min-h-screen w-screen'>
-			<Header />
-			{browse ? <Browse memes={memes} /> : <Meme memes={memes} />}
+			<Header setBrowse={setBrowse} />
+			{browse ? (
+				<Browse memes={memes} setCurrMeme={setCurrMeme} setBrowse={setBrowse} />
+			) : (
+				<Meme
+					memes={memes}
+					setMemes={setMemes}
+					currMeme={currMeme}
+					setCurrMeme={setCurrMeme}
+				/>
+			)}
 			<Footer />
 		</div>
 	);
