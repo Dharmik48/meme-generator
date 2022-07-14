@@ -4,7 +4,7 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
 	return (
-		<footer className='text-lg flex justify-between py-8 px-12 bg-gradient-to-r from-algae to-grass shadow-2xl'>
+		<footer className='text-lg flex justify-between py-8 px-12 bg-gradient-to-r from-algae to-grass shadow-2xl lg:px-44'>
 			<p>
 				Made with <FontAwesomeIcon icon={faHeart} color='red' /> by Dharmik
 			</p>
