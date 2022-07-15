@@ -18,7 +18,9 @@ export default function Browse({ memes, setCurrMeme, setBrowse }) {
 
 	return (
 		<section className='my-12 px-12 lg:px-44'>
-			<h1 className='text-4xl mb-4 text-white'>Top meme templates</h1>
+			<h1 className='text-4xl mb-4 text-algae dark:text-white'>
+				Top meme templates
+			</h1>
 			<main>
 				<ul className='columns-1 md:columns-2 lg:columns-3 -mx-4'>
 					{renderMemes}
