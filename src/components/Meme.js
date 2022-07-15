@@ -30,6 +30,9 @@ export default function Meme({ memes, setMemes, currMeme, setCurrMeme }) {
 				</form>
 				<DownloadBtn />
 				<RandomImg memes={memes} setCurrMeme={setCurrMeme} />
+				<p className='text-algae dark:text-white'>
+					Hint: You can drag and move around the text!
+				</p>
 			</div>
 			<MemeImg memeData={currMeme} topText={topText} bottomText={bottomText} />
 		</section>
