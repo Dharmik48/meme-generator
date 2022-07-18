@@ -10,9 +10,37 @@ Live site - [Click here](https://memeracle.vercel.app)
 
 To install and run this project locally follow these steps:
 
-1. Fork and clone this repo
-2. Run `npm install` from within the repo's directory
-3. Run `npm start`
+1. [Fork](https://github.com/Dharmik48/meme-generator/fork) this repository
+2. Click the 'code' drop down and depending on how you prefer to clone, clone your fork. This step can be done several different ways and is up to personal preference.
+
+   - if you use HTTPS or SSH to clone run
+
+   ```
+   git clone URL
+   ```
+
+   - if you use GitHub CLI run
+
+   ```
+   gh repo clone REPO-PATH
+   ```
+
+   - alternatively you can open the project in GitHub desktop or download it as a ZIP.
+
+   To read more about the different ways to clone a project you can read more [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+3. After cloning your fork to your machine, navigate to it in your terminal
+4. From within the projects directory, run the following command to install dependencies
+
+```
+npm install
+```
+
+5. Again, from within the projects directory, run the following command
+
+```
+npm start
+```
 
 This should start the dev server in your browser. If you're having any environment issues during installation open an issue describing the problem.
 
@@ -32,4 +60,4 @@ You need 0 coding knowledge to contribute to the project! Some good ideas for fi
 
 Just raise an [issue](https://github.com/Dharmik48/meme-generator/issues/new) for it
 
-<!-- Please read CONTRIBUTING for a full guide to contributing to this project. -->
+Please read [CONTRIBUTING](https://github.com/Dharmik48/meme-generator/blob/main/CONTRIBUTING.md) for a full guide to contributing to this project.
