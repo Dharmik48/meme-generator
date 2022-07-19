@@ -16,13 +16,13 @@ To install and run this project locally follow these steps:
    - if you use HTTPS or SSH to clone run
 
    ```
-   git clone URL
+   git clone https://github.com/<your-github-username>/meme-generator
    ```
 
    - if you use GitHub CLI run
 
    ```
-   gh repo clone REPO-PATH
+   gh repo clone https://github.com/Dharmik48/meme-generator
    ```
 
    - alternatively you can open the project in GitHub desktop or download it as a ZIP.
@@ -30,6 +30,11 @@ To install and run this project locally follow these steps:
    To read more about the different ways to clone a project you can read more [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 3. After cloning your fork to your machine, navigate to it in your terminal
+
+```
+cd meme-generator
+```
+
 4. From within the projects directory, run the following command to install dependencies
 
 ```
