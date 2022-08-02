@@ -1,10 +1,10 @@
-import Pagination from './Pagination';
-import { useEffect, useState } from 'react';
+import Pagination from "./Pagination";
+import { useEffect, useState } from "react";
 
 export default function Browse({ memes, setCurrMeme, setBrowse }) {
     const MEMES_PER_PAGE = 25;
 
-    const [memeSearch, setMemeSearch] = useState('');
+    const [memeSearch, setMemeSearch] = useState("");
     const [pages, setPages] = useState();
     const [currPage, setCurrPage] = useState(1);
     const [currMemes, setCurrMemes] = useState(memes.slice(currPage * 25));
@@ -38,7 +38,7 @@ export default function Browse({ memes, setCurrMeme, setBrowse }) {
     }
 
     function renderMemes() {
-      if (memeSearch === '') {
+      if (memeSearch === "") {
         return currMemes.map(renderMeme);
       }
 
