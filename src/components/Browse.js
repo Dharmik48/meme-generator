@@ -3,7 +3,6 @@ import { useState } from 'react';
 export default function Browse({ memes, setCurrMeme, setBrowse }) {
   const [memeSearch, setMemeSearch] = useState('');
 
-  // renderMemes --> slice takes the first 25 memes --> filter is what selects memes for search --> map displays
   const renderMemes = memes
     .slice(0, 25)
     .filter((meme) => {
