@@ -5,7 +5,7 @@ export default function Header({ setBrowse }) {
         <header className="h-44 flex items-center justify-between py-8 px-12 bg-gradient-to-r from-algae to-grass shadow-2xl md:h-40 lg:h-28 lg:px-44">
             <div
                 onClick={() => setBrowse(true)}
-                className="title flex items-center h-full gap-6"
+                className="cursor-pointer flex items-center h-full gap-6"
             >
                 <img
                     className="aspect-square h-full"
