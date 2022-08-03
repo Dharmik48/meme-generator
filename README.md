@@ -66,3 +66,9 @@ You need 0 coding knowledge to contribute to the project! Some good ideas for fi
 Just raise an [issue](https://github.com/Dharmik48/meme-generator/issues/new) for it
 
 Please read [CONTRIBUTING](https://github.com/Dharmik48/meme-generator/blob/main/CONTRIBUTING.md) for a full guide to contributing to this project.
+
+## 💪 Thanks to all Contributors
+
+Thanks a lot for spending your time helping Meme Generator grow. Thanks a lot! Keep rocking 🍻
+
+[![Contributors](https://contrib.rocks/image?repo=Dharmik48/meme-generator)](https://github.com/Dharmik48/meme-generator/graphs/contributors)
