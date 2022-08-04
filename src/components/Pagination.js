@@ -8,7 +8,7 @@ export default function Pagination({ pages, currPage, onPaginationChanged }) {
                 className="focus:text-black hover:text-gray-500"
                 onClick={() => onPaginationChanged(currPage - 1)}
                 icon={faArrowLeft}
-                color="white"
+                color="black"
                 size="2x"
             />
             <div className="flex gap-5">
@@ -18,8 +18,8 @@ export default function Pagination({ pages, currPage, onPaginationChanged }) {
                         <button
                             className={`${
                                 currPage - 1 === i
-                                    ? "text-grass underline"
-                                    : "text-white"
+                                    ? "text-grass"
+                                    : "text-black"
                             } text-4xl hover:text-gray-500 click:text-black`}
                             key={i + 1}
                             onClick={() => onPaginationChanged(i + 1)}
@@ -33,7 +33,7 @@ export default function Pagination({ pages, currPage, onPaginationChanged }) {
                 className="focus:text-black hover:text-gray-500"
                 onClick={() => onPaginationChanged(currPage + 1)}
                 icon={faArrowRight}
-                color="white"
+                color="black"
                 size="2x"
             />
         </div>
