@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 
-export default function MemeImg({ memeData, topText, bottomText }) {
-	// console.log(memeData);
+export default function MemeImg({ memeData, text1, text2, text3, text4, text5 }) {
+	const allTexts = [text1,text2,text3,text4,text5];
 	return (
 		<div id='meme' className='relative flex-1'>
 			<img
@@ -9,16 +9,13 @@ export default function MemeImg({ memeData, topText, bottomText }) {
 				alt={memeData.name}
 				className='w-full aspect-square'
 			/>
-			<Draggable bounds='parent'>
-				<div className='top-5 left-1/3 cursor-grab meme-text text-4xl font-mono text-white w-fit absolute'>
-					{topText}
-				</div>
-			</Draggable>
-			<Draggable bounds='parent'>
-				<div className='bottom-5 left-1/3 cursor-grab meme-text text-4xl font-mono text-white w-fit absolute'>
-					{bottomText}
-				</div>
-			</Draggable>
+			{allTexts.slice(0,memeData.box_count).map((text)=>(
+				<Draggable bounds='parent'>
+					<div className='bottom-80 left-1/3 cursor-grab meme-text text-4xl font-mono text-white w-fit relative'>
+						{text}
+					</div>
+				</Draggable>
+			))}
 		</div>
 	);
 }

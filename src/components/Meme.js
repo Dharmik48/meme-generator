@@ -4,9 +4,14 @@ import MemeImg from "./MemeImg";
 import DownloadBtn from "./DownloadBtn";
 import RandomImg from "./RandomImg";
 
-export default function Meme({ memes, setMemes, currMeme, setCurrMeme }) {
-    const [topText, setTopText] = useState("Top Text");
-    const [bottomText, setBottomText] = useState("Bottom Text");
+export default function Meme({ memes, currMeme, setCurrMeme }) {
+    const [Text1, setText1] = useState("Text1");
+    const [Text2, setText2] = useState("Text2");
+    const [Text3, setText3] = useState("Text3");
+    const [Text4, setText4] = useState("Text4");
+    const [Text5, setText5] = useState("Text5");
+
+    let allInputs = [<InputBox text={Text1} setText={setText1}/>,<InputBox text={Text2} setText={setText2}/>,<InputBox text={Text3} setText={setText3}/>,<InputBox text={Text4} setText={setText4}/>,<InputBox text={Text5} setText={setText5}/>]
 
     useEffect(() => {
         Object.keys(currMeme).length === 0 &&
@@ -17,16 +22,9 @@ export default function Meme({ memes, setMemes, currMeme, setCurrMeme }) {
         <section className="py-20 mx-12 flex gap-14 flex-col lg:flex-row-reverse lg:mx-44">
             <div className="flex flex-col gap-8 flex-1">
                 <form className="flex flex-col gap-8 h-min">
-                    <InputBox
-                        placeholder="Top Text"
-                        text={topText}
-                        setText={setTopText}
-                    />
-                    <InputBox
-                        placeholder="Bottom Text"
-                        text={bottomText}
-                        setText={setBottomText}
-                    />
+                    {allInputs.slice(0,currMeme.box_count).map((input)=>(
+                        input
+                    ))}
                 </form>
                 <DownloadBtn />
                 <RandomImg memes={memes} setCurrMeme={setCurrMeme} />
@@ -36,8 +34,11 @@ export default function Meme({ memes, setMemes, currMeme, setCurrMeme }) {
             </div>
             <MemeImg
                 memeData={currMeme}
-                topText={topText}
-                bottomText={bottomText}
+                text1={Text1}
+                text2={Text2}
+                text3={Text3}
+                text4={Text4}
+                text5={Text5}
             />
         </section>
     );
