@@ -63,7 +63,7 @@ export default function Browse({ memes, setCurrMeme, setBrowse }) {
         <section className="my-12 px-12 lg:px-44">
             <div className="mb-6 flex justify-between mb-2">
               <h1 className="text-4xl text-algae dark:text-white self-center">
-                Top meme templates
+                Top Meme Templates
               </h1>
               <input
                 onChange={(event) => setMemeSearch(event.target.value)}
